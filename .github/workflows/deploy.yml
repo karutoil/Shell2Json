@@ -38,10 +38,10 @@ jobs:
           echo "VITE_BASE=$VITE_BASE"
           npm run build
 
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v2
+      - name: Deploy to `gh-pages` branch (push dist)
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+          branch: gh-pages
+          folder: dist
+          clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
