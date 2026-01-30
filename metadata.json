@@ -1,0 +1,5 @@
+{
+  "name": "Shell2JSON",
+  "description": "A developer utility to convert raw shell scripts into JSON-escaped single-line strings suitable for configuration files.",
+  "requestFramePermissions": []
+}
